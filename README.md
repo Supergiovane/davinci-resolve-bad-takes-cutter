@@ -1,4 +1,4 @@
-# Bad takes cutter for Blackmagic **Davinci Resolve** and **Bitfocus Companion**.
+# Bad takes cutter for Blackmagic Davinci Resolve and Bitfocus Companion.
 
 ![alt text](public/2.jpg)
 
@@ -9,6 +9,7 @@ Assets download:
 
 - [BAD-TAKE image](./public/BAD-TAKE.png)
 - [Companion Buttons](./public/buttons.companionconfig)
+
 
     Load the BAD-TAKE.jpg in the Atem Control Software
     Import the Companion Button 
