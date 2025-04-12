@@ -1,6 +1,4 @@
-# davinci-resolve-bad-takes-cutter
-
-### Bad takes cutter for Blackmagic **Davinci Resolve** and **Bitfocus Companion**.
+# Bad takes cutter for Blackmagic **Davinci Resolve** and **Bitfocus Companion**.
 
 ![alt text](public/2.jpg)
 
