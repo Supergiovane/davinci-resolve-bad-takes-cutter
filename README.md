@@ -26,7 +26,7 @@ Start a take by pressing **TAKE START**. The Atem will start recording.
 
 ![alt text](public/1.jpg)
 
-Once done with your recordings, [GO HERE](https://pages.github.com:3000/) and:
+Once done with your recordings, [GO HERE](http://casacorte.ddns.net:3000/) and:
 
 - Upload your .drp project file, taken from the Atem and press "Upload and Process".
 - Put the downloaded clean project file into the same folder as the original .drp project file, then double click it. The clean project file contains good takes and gaps where it was bad takes.
