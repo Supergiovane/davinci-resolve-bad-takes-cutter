@@ -5,13 +5,12 @@
 First time here? 
 [View the youtube video](https://pages.github.com/) 
 
-Assets download: 
+Load the BAD-TAKE.jpg in the Atem Control Software and Import the Companion Button: 
 
 - [BAD-TAKE image](./public/BAD-TAKE.png)
 - [Companion Buttons](./public/buttons.companionconfig)
 
-    Load the BAD-TAKE.jpg in the Atem Control Software
-    Import the Companion Button 
+ 
 
 ## **How it works**:  
 
