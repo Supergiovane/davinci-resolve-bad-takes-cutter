@@ -2,15 +2,15 @@
 
 ### Bad takes cutter for Blackmagic **Davinci Resolve** and **Bitfocus Companion**.
 
-    First time here? 
-    [View the youtube video](https://pages.github.com/) 
-    Assets download:
-    - [BAD-TAKE image](./public/BAD-TAKE.png)
-    - [Companion Buttons](./public/buttons.companionconfig)
-    
-    Load the BAD-TAKE.jpg in the Atem Control Software 
-    Import the Companion Button 
-    
+First time here? 
+[View the youtube video](https://pages.github.com/) 
+Assets download:
+- [BAD-TAKE image](./public/BAD-TAKE.png)
+- [Companion Buttons](./public/buttons.companionconfig)
+
+Load the BAD-TAKE.jpg in the Atem Control Software 
+Import the Companion Button 
+
 ## **How it works**:  
 
 Start a take by pressing **TAKE START**.
