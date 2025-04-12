@@ -1,5 +1,11 @@
 # Bad takes cutter
-Bad takes cutter for Blackmagic Davinci Resolve and Bitfocus Companion.
+Bad takes cutter for Blackmagic Davinci Resolve and Bitfocus Companion.  
+The Atem Mini Extreme ISO creates a project file compatible with Davinci Resolve, together with all video and audio files. This file contains all the takes you record whenever you press RECORD on the Atem.  
+This tool has been confirmed working with the Atem Mini Extreme ISO (not tested with other Atems) and it's aimed to speed up youtubers and content creators workflow, by automatically delete the bad takes from such file.  
+
+## Workflow
+
+You record your takes (bad and good ones) ->> END ->> You upload the project file created by your Atem into the Bad takes cutter's web page ->> You download the purged project file to be directly imported into Davinci Resolve.
 
 ![alt text](public/2.jpg)
 
