@@ -7,7 +7,7 @@ First time here?
 
 Load the BAD-TAKE.jpg in the Atem Control Software and Import the Companion Button: 
 
-- [BAD-TAKE image](./public/BAD-TAKE.png)
+- [BAD-TAKE image](./public/BAD-TAKE.png "download")
 - [Companion Buttons](./public/buttons.companionconfig)
 
  
