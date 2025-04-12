@@ -5,7 +5,7 @@ This tool has been confirmed working with the Atem Mini Extreme ISO (not tested 
 
 ## Workflow
 
-You record your takes (bad and good ones) ->> END ->> You upload the project file created by your Atem into the Bad takes cutter's web page ->> You download the purged project file to be directly imported into Davinci Resolve.
+You record your takes (bad and good ones) **->>** END **->>** You upload the project file created by your Atem into the Bad takes cutter's web page **->>** You download the purged project file to be directly imported into Davinci Resolve.
 
 ![alt text](public/2.jpg)
 
@@ -22,11 +22,11 @@ Load the BAD-TAKE.jpg in the Atem's media pool, in the position #5, using the At
 Start a take by pressing **TAKE START**. The Atem will start recording.
 
 - If the take is good, press **TAKE ACCEPT**. The Atem will stop recording and accept the take.
-- If the take is bad, press **TAKE DISCARD**. The Atem will stop recording and reject the take.
+- If the take is bad, press **TAKE DISCARD**. The Atem will stop recording and mark the take as rejected.
 
 ![alt text](public/1.jpg)
 
-Once finished, [GO HERE](https://pages.github.com:3000/) and:
+Once done with your recordings, [GO HERE](https://pages.github.com:3000/) and:
 
 - Upload your .drp project file, taken from the Atem and press "Upload and Process".
 - Put the downloaded clean project file into the same folder as the original .drp project file, then double click it. The clean project file contains good takes and gaps where it was bad takes.
