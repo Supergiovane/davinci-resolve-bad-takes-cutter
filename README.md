@@ -6,6 +6,7 @@ First time here?
 [View the youtube video](https://pages.github.com/) 
 
 **ASSETS DOWNLOAD**
+
 Load the BAD-TAKE.jpg in the Atem Control Software and Import the Companion Button: 
 
 - <a id="raw-url" href="https://raw.githubusercontent.com/Supergiovane/davinci-resolve-bad-takes-cutter/master/public/BAD-TAKE.png">BAD-TAKE image</a> (right click and select "download linked file")
