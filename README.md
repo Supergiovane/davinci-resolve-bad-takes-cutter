@@ -32,14 +32,15 @@ Once done with your recordings, [GO HERE](https://pages.github.com:3000/) and:
 - Put the downloaded clean project file into the same folder as the original .drp project file, then double click it. The clean project file contains good takes and gaps where it was bad takes.
 - To delete timeline gaps in DaVinci Resolve, Select **all clips (Cmd+A) in the timeline's Edit page**, then go to the **Edit** menu and click **Delete Gaps**.  
   
-You can either use the online service provided by the developer (myself), or download this repository and set up the service on your own. Alternatively, if you're familiar with JavaScript, you can modify the <code>server.js</code> file and create your own script to run within DaVinci Resolve.  
+You can either use the online service provided by the developer (myself), or download this repository and set up the service on your own. Alternatively, if you're familiar with JavaScript, you can modify the <code>cleanBadTakes.js</code> file and create your own script to run within DaVinci Resolve.  
 If you use the online service provided by the developer, please consider a little donation to support the development. 
 <div class="paypal-button">
-                  <a href="https://www.paypal.com/donate/?hosted_button_id=S8SKPUBSPK758" target="_blank">
-                    <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" alt="Donate with PayPal button" />
-                  </a>
-                </div>
+    <a href="https://www.paypal.com/donate/?hosted_button_id=S8SKPUBSPK758" target="_blank">
+    <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" alt="Donate with PayPal button" />
+    </a>
+</div>
 
 
 
+![Made in Italy](public/madeinitaly.png)
 
