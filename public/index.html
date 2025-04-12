@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bad takes cutter by Massimo Saccani</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 5px;
+      animation: fadeIn 2s ease;
+      text-align: center;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      margin-bottom: 20px;
+      opacity: 0.8;
+      animation: fadeIn 2.5s ease;
+    }
+
+    form {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: fadeInUp 1.5s ease;
+      transition: border 0.3s;
+      max-width: 90vw;
+      width: 100%;
+    }
+
+    form.dragover {
+      border: 2px dashed #ffffff;
+    }
+
+    .file-upload-label {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 15px;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.2);
+      border: 2px dashed #ff4b2b;
+      border-radius: 10px;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+      max-width: 300px;
+      transition: background 0.3s ease;
+    }
+
+    .file-upload-label:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .file-upload-label i {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    #file-input {
+      display: none;
+    }
+
+    button {
+      background-color: #ff416c;
+      background-image: linear-gradient(to right, #ff4b2b, #ff416c);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 50px;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.2s;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    .status-message {
+      margin-top: 15px;
+      font-size: 1rem;
+      opacity: 0.9;
+      animation: fadeIn 0.5s ease-in-out;
+      text-align: center;
+    }
+
+    a.download-link {
+      margin-top: 30px;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: opacity 0.3s;
+    }
+
+    a.download-link:hover {
+      opacity: 0.7;
+    }
+
+    .paypal-button {
+      margin-top: 50px;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 20px;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.4);
+      width: 100%;
+    }
+
+    footer img {
+      max-width: 150px;
+      opacity: 0.7;
+      transition: opacity 0.3s ease;
+    }
+
+    footer img:hover {
+      opacity: 1;
+    }
+
+    footer p {
+      margin: 10px 0 0;
+      font-size: 0.8rem;
+      color: #ccc;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .subtitle {
+        font-size: 0.9rem;
+      }
+
+      button,
+      .file-upload-label {
+        font-size: 0.9rem;
+      }
+
+      form {
+        padding: 20px;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <h1>Bad takes cutter</h1>
+  <div class="subtitle">by Massimo Saccani</div>
+  <form id="upload-form" enctype="multipart/form-data">
+    <label for="file-input" class="file-upload-label">
+      <i class="fas fa-upload"></i>
+      Drag a file or click to browse
+    </label>
+    <input id="file-input" type="file" name="file" required />
+    <button type="submit">Upload and Process</button>
+    <div id="upload-status" class="status-message"></div>
+  </form>
+
+  <a class="download-link" href="/download-zip">Download Sample ZIP</a>
+  <div class="paypal-button">
+    <a href="https://www.paypal.com/donate/?hosted_button_id=S8SKPUBSPK758" target="_blank">
+      <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" alt="Donate with PayPal button" />
+    </a>
+  </div>
+
+  <footer>
+    <img src="/Transparent Logo trimmato.png" alt="Max Supergiovane Logo footer">
+    <p>&copy; 2025 Massimo Saccani alias "Max Supergiovane"</p>
+    <p>No user data is stored on the server. The uploaded file is processed in memory and immediately returned for
+      download without being saved to disk.<br />No cookies are saved or processed.</p>
+    <p><a href="/stats" style="color: #ccc; text-decoration: underline;">Stats</a> are available for all users and
+      stored in a single file containing only anonymized data.</p>
+
+  </footer>
+
+  <script>
+    const uploadForm = document.getElementById('upload-form');
+    const fileInputElement = document.getElementById('file-input');
+    const uploadStatus = document.getElementById('upload-status');
+
+    uploadForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(uploadForm);
+      uploadStatus.textContent = 'Uploading...';
+      console.log('Form submission started');
+
+      const xhr = new XMLHttpRequest();
+      xhr.open('POST', 'http://localhost:3000/upload');
+
+      xhr.onload = () => {
+        console.log('Upload complete with status', xhr.status);
+        if (xhr.status === 200) {
+          uploadStatus.textContent = 'Processing complete. Download will start now.';
+          const blob = new Blob([xhr.response], { type: 'text/plain' });
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          const disposition = xhr.getResponseHeader('Content-Disposition');
+          const match = disposition && disposition.match(/filename\s*=\s*"?([^";]+)"?/);
+          a.download = match ? match[1] : 'processed.txt';
+          a.click();
+          URL.revokeObjectURL(url);
+          console.log('Download triggered');
+
+          setTimeout(() => {
+            document.body.innerHTML = `
+              <div style="padding: 40px; text-align: center; font-family: 'Orbitron', sans-serif;">
+                <h2>Instructions</h2>
+                <p>Place the downloaded file in the same directory as the original file.<br>
+                To delete timeline gaps in DaVinci Resolve:<br>
+                Select all clips (Cmd+A) in the Edit page timeline,<br>
+                then go to menu \"Edit\" and click \"Delete Gaps\".</p>
+                <p style="margin-top: 30px;">
+                  <a class="download-link" href="/download-zip">Download Sample ZIP</a>
+                </p>
+                <div class="paypal-button">
+                  <a href="https://www.paypal.com/donate/?hosted_button_id=S8SKPUBSPK758" target="_blank">
+                    <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" alt="Donate with PayPal button" />
+                  </a>
+                </div>
+                <p style="margin-top: 30px;">
+                  <a class="download-link" href="/">Return to Home</a>
+                </p>
+              </div>
+              <footer>
+                <img src="/Transparent Logo trimmato.png" alt="Max Supergiovane Logo footer">
+                <p>&copy; 2025 Massimo Saccani alias \"Max Supergiovane\"</p>
+                <p>No user data is stored on the server. The uploaded file is processed in memory and immediately returned for download without being saved to disk. <br/>No cookies are saved or processed. http://localhost:3000/Stats</p>
+                 <p><a href="/stats" style="color: #ccc; text-decoration: underline;">Stats</a> are available for all users and stored in a single file containing only anonymized data.</p>
+                </footer>
+            `;
+          }, 1000);
+        } else {
+          uploadStatus.textContent = 'Failed to process file';
+          console.error('Failed to process file');
+        }
+      };
+
+      xhr.onerror = () => {
+        uploadStatus.textContent = 'Upload error';
+        console.error('Upload error occurred');
+      };
+
+      xhr.responseType = 'blob';
+      xhr.send(formData);
+      console.log('XHR send called');
+    });
+
+    ['dragenter', 'dragover'].forEach(evt => {
+      uploadForm.addEventListener(evt, e => {
+        e.preventDefault();
+        e.stopPropagation();
+        uploadForm.classList.add('dragover');
+        console.log(`Drag event: ${evt}`);
+      });
+    });
+
+    ['dragleave', 'drop'].forEach(evt => {
+      uploadForm.addEventListener(evt, e => {
+        e.preventDefault();
+        e.stopPropagation();
+        uploadForm.classList.remove('dragover');
+        console.log(`Drag event: ${evt}`);
+      });
+    });
+
+    uploadForm.addEventListener('drop', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      fileInputElement.files = e.dataTransfer.files;
+      console.log('Files dropped:', fileInputElement.files);
+    });
+  </script>
+</body>
+
+</html>
