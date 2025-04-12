@@ -7,10 +7,9 @@ First time here?
 
 Load the BAD-TAKE.jpg in the Atem Control Software and Import the Companion Button: 
 
-- [BAD-TAKE image](./public/BAD-TAKE.png "download")
-- <a id="raw-url" href="https://raw.githubusercontent.com/Supergiovane/davinci-resolve-bad-takes-cutter/master/public/BAD-TAKE.png">Download FILE</a>
+- <a id="raw-url" href="https://raw.githubusercontent.com/Supergiovane/davinci-resolve-bad-takes-cutter/master/public/BAD-TAKE.png">BAD-TAKE image</a> (right click and select "download linked file")
 - [Companion Buttons](./public/buttons.companionconfig)
-
+- <a id="raw-url" href="https://raw.githubusercontent.com/Supergiovane/davinci-resolve-bad-takes-cutter/master/public/buttons.companionconfig">Companion Buttons</a> (right click and select "download linked file")
  
 
 ## **How it works**:  
