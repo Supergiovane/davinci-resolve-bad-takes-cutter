@@ -1,0 +1,232 @@
+{
+	"version": 6,
+	"type": "page",
+	"page": {
+		"name": "TAKES",
+		"controls": {
+			"0": {
+				"0": {
+					"type": "button",
+					"style": {
+						"text": "TAKE START",
+						"textExpression": false,
+						"size": "14",
+						"png64": null,
+						"alignment": "center:center",
+						"pngalignment": "center:center",
+						"color": 16777215,
+						"bgcolor": 0,
+						"show_topbar": "default"
+					},
+					"options": {
+						"rotaryActions": false,
+						"stepAutoProgress": true
+					},
+					"feedbacks": [
+						{
+							"id": "8Yfj2apB6vjApRSFVao-9",
+							"type": "recordStatus",
+							"instance_id": "ToEi-qI-mdiI4hRejB3-5",
+							"options": {
+								"state": 0
+							},
+							"style": {
+								"color": 0,
+								"bgcolor": 65280
+							},
+							"isInverted": false
+						}
+					],
+					"steps": {
+						"0": {
+							"action_sets": {
+								"down": [
+									{
+										"id": "IzjzicSKqNaJdAIXzuBp7",
+										"action": "recordStartStop",
+										"instance": "ToEi-qI-mdiI4hRejB3-5",
+										"options": {
+											"record": "true"
+										}
+									}
+								],
+								"up": []
+							},
+							"options": {
+								"runWhileHeld": []
+							}
+						}
+					}
+				},
+				"1": {
+					"type": "button",
+					"style": {
+						"text": "TAKE ACCEPT",
+						"textExpression": false,
+						"size": "14",
+						"png64": null,
+						"alignment": "center:center",
+						"pngalignment": "center:center",
+						"color": 16777215,
+						"bgcolor": 0,
+						"show_topbar": "default"
+					},
+					"options": {
+						"rotaryActions": false,
+						"stepAutoProgress": false
+					},
+					"feedbacks": [
+						{
+							"id": "trd_wtrZCtJ3NVHyyrYXr",
+							"type": "recordStatus",
+							"instance_id": "ToEi-qI-mdiI4hRejB3-5",
+							"options": {
+								"state": 1
+							},
+							"style": {
+								"color": 0,
+								"bgcolor": 65280
+							},
+							"isInverted": false
+						}
+					],
+					"steps": {
+						"0": {
+							"action_sets": {
+								"down": [
+									{
+										"id": "du7iePbyBzTTeJIplU_J9",
+										"action": "recordStartStop",
+										"instance": "ToEi-qI-mdiI4hRejB3-5",
+										"options": {
+											"record": "false"
+										}
+									}
+								],
+								"up": []
+							},
+							"options": {
+								"runWhileHeld": []
+							}
+						}
+					}
+				},
+				"2": {
+					"type": "button",
+					"style": {
+						"text": "TAKE DISCARD",
+						"textExpression": false,
+						"size": "14",
+						"png64": null,
+						"alignment": "center:center",
+						"pngalignment": "center:center",
+						"color": 16777215,
+						"bgcolor": 0,
+						"show_topbar": "default"
+					},
+					"options": {
+						"rotaryActions": false,
+						"stepAutoProgress": false
+					},
+					"feedbacks": [
+						{
+							"id": "X_kGGYv92r_XJEMa17B7e",
+							"type": "recordStatus",
+							"instance_id": "ToEi-qI-mdiI4hRejB3-5",
+							"options": {
+								"state": 1
+							},
+							"style": {
+								"color": 0,
+								"bgcolor": 16711680
+							},
+							"isInverted": false
+						}
+					],
+					"steps": {
+						"0": {
+							"action_sets": {
+								"down": [
+									{
+										"id": "yCzq4BpuOXX1zmZWQ8WPp",
+										"action": "mediaPlayerSource",
+										"instance": "ToEi-qI-mdiI4hRejB3-5",
+										"options": {
+											"mediaplayer": 1,
+											"source": 4
+										}
+									},
+									{
+										"id": "r8GytfUvnu9E_8Lq3YFS_",
+										"action": "program",
+										"instance": "ToEi-qI-mdiI4hRejB3-5",
+										"options": {
+											"mixeffect": 0,
+											"input": 3020
+										}
+									},
+									{
+										"id": "MQa5TeG7LZhgmHSwdH4jA",
+										"action": "wait",
+										"instance": "internal",
+										"options": {
+											"time": "2000"
+										},
+										"children": {}
+									},
+									{
+										"id": "uvp5QWR_er2cB5X13oQ5Z",
+										"action": "recordStartStop",
+										"instance": "ToEi-qI-mdiI4hRejB3-5",
+										"options": {
+											"record": "false"
+										}
+									},
+									{
+										"id": "J__VY11KuiZKSfOf5G_ne",
+										"action": "program",
+										"instance": "ToEi-qI-mdiI4hRejB3-5",
+										"options": {
+											"mixeffect": 0,
+											"input": 2
+										}
+									}
+								],
+								"up": []
+							},
+							"options": {
+								"runWhileHeld": []
+							}
+						}
+					}
+				}
+			}
+		},
+		"gridSize": {
+			"minColumn": 0,
+			"maxColumn": 7,
+			"minRow": 0,
+			"maxRow": 3
+		}
+	},
+	"instances": {
+		"ToEi-qI-mdiI4hRejB3-5": {
+			"instance_type": "bmd-atem",
+			"sortOrder": 1,
+			"label": "atem",
+			"isFirstInit": false,
+			"config": {
+				"host": "",
+				"modelID": 17,
+				"presets": 0,
+				"fadeFps": 10,
+				"enableCameraControl": true,
+				"pollTimecode": false,
+				"bonjourHost": "192.168.1.55:9910"
+			},
+			"lastUpgradeIndex": 6,
+			"enabled": true
+		}
+	},
+	"oldPageNumber": 2
+}

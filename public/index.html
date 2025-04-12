@@ -151,6 +151,14 @@
       color: #ccc;
     }
 
+    .standardtext {
+      margin: 10px 0 0;
+      font-size: 0.8rem;
+      font-weight: lighter;
+      font-style: unset;
+      color: #e58c8c;
+    }
+
     @media (max-width: 600px) {
       h1 {
         font-size: 1.8rem;
@@ -198,17 +206,24 @@
 <body>
   <h1>Bad takes cutter</h1>
   <div class="subtitle">by Massimo Saccani</div>
+  <p class="standardtext">
+    First time here? Download assets for Bitfocus Companion and Davinci Resolve<br />and leard how to use it.<br />
+    <a class="download-link" href="/download-zip">Download assets now!</a>
+  </p>
+  <br />
+
   <form id="upload-form" enctype="multipart/form-data">
     <label for="file-input" class="file-upload-label">
       <i class="fas fa-upload"></i>
       Drag a file or click to browse
     </label>
+    <div id="file-info" class="status-message" style="display: none;"></div>
+
     <input id="file-input" type="file" name="file" required />
     <button type="submit">Upload and Process</button>
     <div id="upload-status" class="status-message"></div>
   </form>
 
-  <a class="download-link" href="/download-zip">Download Sample ZIP</a>
   <div class="paypal-button">
     <a href="https://www.paypal.com/donate/?hosted_button_id=S8SKPUBSPK758" target="_blank">
       <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" alt="Donate with PayPal button" />
@@ -222,27 +237,40 @@
       download without being saved to disk.<br />No cookies are saved or processed.</p>
     <p><a href="/stats" style="color: #ccc; text-decoration: underline;">Stats</a> are available for all users and
       stored in a single file containing only anonymized data.</p>
-
   </footer>
 
   <script>
     const uploadForm = document.getElementById('upload-form');
     const fileInputElement = document.getElementById('file-input');
     const uploadStatus = document.getElementById('upload-status');
+    const fileInfo = document.getElementById('file-info');
+
+    const showFileInfo = () => {
+      const uploadedFile = fileInputElement.files[0];
+      if (uploadedFile) {
+        fileInfo.innerHTML = `
+          <p><strong>Selected file:</strong> ${uploadedFile.name}</p>
+          <p><strong>Size:</strong> ${(uploadedFile.size / 1024).toFixed(2)} KB</p>
+        `;
+        fileInfo.style.display = 'block';
+      }
+    };
+
+    fileInputElement.addEventListener('change', showFileInfo);
 
     uploadForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const formData = new FormData(uploadForm);
       uploadStatus.textContent = 'Uploading...';
-      console.log('Form submission started');
 
       const xhr = new XMLHttpRequest();
       xhr.open('POST', 'http://localhost:3000/upload');
 
       xhr.onload = () => {
-        console.log('Upload complete with status', xhr.status);
         if (xhr.status === 200) {
-          uploadStatus.textContent = 'Processing complete. Download will start now.';
+          uploadStatus.textContent = 'Processing complete.';
+          uploadForm.style.display = 'none';
+
           const blob = new Blob([xhr.response], { type: 'text/plain' });
           const url = URL.createObjectURL(blob);
           const a = document.createElement('a');
@@ -252,7 +280,6 @@
           a.download = match ? match[1] : 'processed.txt';
           a.click();
           URL.revokeObjectURL(url);
-          console.log('Download triggered');
 
           setTimeout(() => {
             document.body.innerHTML = `
@@ -261,7 +288,7 @@
                 <p>Place the downloaded file in the same directory as the original file.<br>
                 To delete timeline gaps in DaVinci Resolve:<br>
                 Select all clips (Cmd+A) in the Edit page timeline,<br>
-                then go to menu \"Edit\" and click \"Delete Gaps\".</p>
+                then go to menu "Edit" and click "Delete Gaps".</p>
                 <p style="margin-top: 30px;">
                   <a class="download-link" href="/download-zip">Download Sample ZIP</a>
                 </p>
@@ -276,26 +303,23 @@
               </div>
               <footer>
                 <img src="/Transparent Logo trimmato.png" alt="Max Supergiovane Logo footer">
-                <p>&copy; 2025 Massimo Saccani alias \"Max Supergiovane\"</p>
+                <p>&copy; 2025 Massimo Saccani alias "Max Supergiovane"</p>
                 <p>No user data is stored on the server. The uploaded file is processed in memory and immediately returned for download without being saved to disk. <br/>No cookies are saved or processed. http://localhost:3000/Stats</p>
                  <p><a href="/stats" style="color: #ccc; text-decoration: underline;">Stats</a> are available for all users and stored in a single file containing only anonymized data.</p>
-                </footer>
+              </footer>
             `;
           }, 1000);
         } else {
           uploadStatus.textContent = 'Failed to process file';
-          console.error('Failed to process file');
         }
       };
 
       xhr.onerror = () => {
         uploadStatus.textContent = 'Upload error';
-        console.error('Upload error occurred');
       };
 
       xhr.responseType = 'blob';
       xhr.send(formData);
-      console.log('XHR send called');
     });
 
     ['dragenter', 'dragover'].forEach(evt => {
@@ -303,7 +327,6 @@
         e.preventDefault();
         e.stopPropagation();
         uploadForm.classList.add('dragover');
-        console.log(`Drag event: ${evt}`);
       });
     });
 
@@ -312,7 +335,6 @@
         e.preventDefault();
         e.stopPropagation();
         uploadForm.classList.remove('dragover');
-        console.log(`Drag event: ${evt}`);
       });
     });
 
@@ -320,9 +342,10 @@
       e.preventDefault();
       e.stopPropagation();
       fileInputElement.files = e.dataTransfer.files;
-      console.log('Files dropped:', fileInputElement.files);
+      showFileInfo();
     });
   </script>
+
 </body>
 
 </html>

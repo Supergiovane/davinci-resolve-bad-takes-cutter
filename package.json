@@ -1,7 +1,7 @@
 {
   "name": "bad-takes-cutter",
   "version": "1.0.0",
-  "description": "A modern web server to upload, process, and download files without saving them on disk.",
+  "description": "Bad takes cutter for Blackmagic Davinci Resolve. A modern web server to upload, process, and download the processed Davinci Resolve project file.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"

@@ -3,6 +3,7 @@ const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
 const geoip = require('geoip-lite');
+const cleanBadTakes = require('./cleanBadTakes');
 const app = express();
 const port = 3000;
 
@@ -49,9 +50,12 @@ app.post('/upload', upload.single('file'), (req, res) => {
   const ip = req.ip;
   logUpload(ip);
 
-  const output = `Processed content of: ${req.file.originalname}`;
-  res.setHeader('Content-Disposition', 'attachment; filename="processed_' + req.file.originalname + '"');
-  res.send(output);
+  setTimeout(() => {
+    const output = cleanBadTakes(req.file.buffer.toString());
+    res.setHeader('Content-Disposition', 'attachment; filename="processed_' + req.file.originalname + '"');
+    res.send(output);
+  }, 3000);
+
 });
 
 // Endpoint download ZIP
