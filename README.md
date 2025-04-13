@@ -13,8 +13,8 @@ You record your takes (bad and good ones) **->>** END **->>** You upload the pro
 
 **ASSETS DOWNLOAD**
 
-- <a id="raw-url" href="https://github.com/Supergiovane/davinci-resolve-bad-takes-cutter/releases/download/1.0.0/BAD-TAKE.png">BAD-TAKE image</a> (right click and select "download linked file")
-- <a id="raw-url" href="https://github.com/Supergiovane/davinci-resolve-bad-takes-cutter/releases/download/1.0.0/buttons.companionconfig">Companion Buttons</a> (right click and select "download linked file")
+- <a id="raw-url" href="https://github.com/Supergiovane/davinci-resolve-bad-takes-cutter/releases/download/1.0.0/BAD-TAKE.png">BAD-TAKE image</a>
+- <a id="raw-url" href="https://github.com/Supergiovane/davinci-resolve-bad-takes-cutter/releases/download/1.0.0/buttons.companionconfig">Companion Buttons</a>
 
 Load the BAD-TAKE.jpg in the Atem's media pool, in the position #5, using the Atem Control Software. Then, import the Companion Button file into Bitfocus Companion, using the "Import configuration file" button, located in the import/export TAB. You're done.  
 [View this youtube VIDEO](https://pages.github.com/), to take a look of the entire process.
