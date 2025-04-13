@@ -238,6 +238,9 @@
       download without being saved to disk.<br />No cookies are saved or processed.</p>
     <p><a href="/stats" style="color: #ccc; text-decoration: underline;">Stats</a> are available for all users and
       stored in a single file containing only anonymized data.</p>
+    <p><a href="https://github.com/Supergiovane/davinci-resolve-bad-takes-cutter"
+        style="color: #ccc; text-decoration: underline;">GitHub open source code</a> is available for free, for self
+      hosting.</p>
   </footer>
 
   <script>
@@ -265,7 +268,7 @@
       uploadStatus.textContent = 'Uploading...';
 
       const xhr = new XMLHttpRequest();
-      xhr.open('POST', 'http://localhost:3000/upload');
+      xhr.open('POST', 'http://casacorte.ddns.net:3000/upload');
 
       xhr.onload = () => {
         if (xhr.status === 200) {
@@ -291,8 +294,8 @@
                 Select all clips (Cmd+A) in the Edit page timeline,<br>
                 then go to menu "Edit" and click "Delete Gaps".</p>
                 <p style="margin-top: 30px;">
-                  <a class="download-link" href="/download-zip">Download Sample ZIP</a>
-                </p>
+                      <p><a class="download-link" href="https://github.com/Supergiovane/davinci-resolve-bad-takes-cutter" style="color: #ccc; text-decoration: underline;">GitHub open source code</a> is available for free, for self hosting.</p>
+          </p>
                 <div class="paypal-button">
                   <a href="https://www.paypal.com/donate/?hosted_button_id=S8SKPUBSPK758" target="_blank">
                     <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" alt="Donate with PayPal button" />
@@ -305,9 +308,10 @@
               <footer>
                 <img src="/Transparent Logo trimmato.png" alt="Max Supergiovane Logo footer">
                 <p>&copy; 2025 Massimo Saccani alias "Max Supergiovane"</p>
-                <p>No user data is stored on the server. The uploaded file is processed in memory and immediately returned for download without being saved to disk. <br/>No cookies are saved or processed. http://localhost:3000/Stats</p>
+                <p>No user data is stored on the server. The uploaded file is processed in memory and immediately returned for download without being saved to disk. <br/>No cookies are saved or processed. http://casacorte.ddns.net:3000/Stats</p>
                  <p><a href="/stats" style="color: #ccc; text-decoration: underline;">Stats</a> are available for all users and stored in a single file containing only anonymized data.</p>
-              </footer>
+              <p><a href="https://github.com/Supergiovane/davinci-resolve-bad-takes-cutter" style="color: #ccc; text-decoration: underline;">GitHub open source code</a> is available for free, for self hosting.</p>
+                 </footer>
             `;
           }, 1000);
         } else {

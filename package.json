@@ -1,6 +1,6 @@
 {
   "name": "bad-takes-cutter",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Bad takes cutter for Blackmagic Davinci Resolve. A modern web server to upload, process, and download the processed Davinci Resolve project file.",
   "main": "server.js",
   "scripts": {
