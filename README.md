@@ -21,14 +21,14 @@ Load the BAD-TAKE.jpg in the Atem's media pool, in the position #5, using the At
 
 ## **How it works**:  
 
-Start a take by pressing **TAKE START**. The Atem will start recording.
-
+- Start a take by pressing **TAKE START**. The Atem will start recording.
 - If the take is good, press **TAKE ACCEPT**. The Atem will stop recording and accept the take.
 - If the take is bad, press **TAKE DISCARD**. The Atem will stop recording and mark the take as rejected.
+- Repeat again, until you fihished your video.
 
 ![alt text](public/1.jpg)
 
-Once done with your recordings, [GO HERE](http://casacorte.ddns.net:3000) and:
+Once done with your video, [GO HERE](http://casacorte.ddns.net:3000) and:
 
 - Upload your .drp project file, taken from the Atem and press "Upload and Process".
 - Put the downloaded clean project file into the same folder as the original .drp project file, then double click it. The clean project file contains good takes and gaps where it was bad takes.
