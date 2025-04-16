@@ -17,7 +17,7 @@ You record your takes (bad and good ones) **->>** END **->>** You upload the pro
 - <a id="raw-url" href="https://github.com/Supergiovane/davinci-resolve-bad-takes-cutter/releases/download/1.0.0/buttons.companionconfig">Companion Buttons</a>
 
 Load the BAD-TAKE.jpg in the Atem's media pool, in the position #5, using the Atem Control Software. Then, import the Companion Button file into Bitfocus Companion, using the "Import configuration file" button, located in the import/export TAB. You're done.  
-[View this youtube VIDEO](https://pages.github.com/), to take a look of the entire process.
+[View this youtube VIDEO](https://youtu.be/9UiCROFJnt0), to take a look of the entire process.
 
 ## **How it works**:  
 
@@ -32,7 +32,7 @@ Once done with your recordings, [GO HERE](http://casacorte.ddns.net:3000) and:
 
 - Upload your .drp project file, taken from the Atem and press "Upload and Process".
 - Put the downloaded clean project file into the same folder as the original .drp project file, then double click it. The clean project file contains good takes and gaps where it was bad takes.
-- To delete timeline gaps in DaVinci Resolve, Select **all clips (Cmd+A) in the timeline's Edit page**, then go to the **Edit** menu and click **Delete Gaps**.  
+- To delete timeline gaps in DaVinci Resolve, Select **all clips (Cmd+A or ctrl+A) in the timeline's Edit page**, then go to the **Edit** menu and click **Delete Gaps**.  
   
 You can either use the online service provided by the developer (myself), or download this repository and set up the service on your own. Alternatively, if you're familiar with JavaScript, you can modify the <code>cleanBadTakes.js</code> file and create your own script to run within DaVinci Resolve.  
 If you use the online service provided by the developer, please consider a little donation to support the development. 
