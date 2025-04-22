@@ -8,7 +8,7 @@
 				"0": {
 					"type": "button",
 					"style": {
-						"text": "TAKE START",
+						"text": "START CLIP",
 						"textExpression": false,
 						"size": "14",
 						"png64": null,
@@ -61,7 +61,7 @@
 				"1": {
 					"type": "button",
 					"style": {
-						"text": "TAKE ACCEPT",
+						"text": "ACCEPT CLIP",
 						"textExpression": false,
 						"size": "14",
 						"png64": null,
@@ -114,7 +114,7 @@
 				"2": {
 					"type": "button",
 					"style": {
-						"text": "TAKE DISCARD",
+						"text": "DISCARD CLIP",
 						"textExpression": false,
 						"size": "14",
 						"png64": null,

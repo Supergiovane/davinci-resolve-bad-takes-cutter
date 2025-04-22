@@ -21,9 +21,9 @@ Load the BAD-TAKE.jpg in the Atem's media pool, in the position #5, using the At
 
 ## **How it works**:  
 
-- Start a take by pressing **TAKE START**. The Atem will start recording.
-- If the take is good, press **TAKE ACCEPT**. The Atem will stop recording and accept the take.
-- If the take is bad, press **TAKE DISCARD**. The Atem will stop recording and mark the take as rejected.
+- Start a take by pressing **START CLIP**. The Atem will start recording.
+- If the take is good, press **ACCEPT CLIP**. The Atem will stop recording and accept the take.
+- If the take is bad, press **DISCARD CLIP**. The Atem will stop recording and mark the take as rejected.
 - Repeat again, until you fihished your video.
 
 ![alt text](public/1.jpg)
