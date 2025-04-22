@@ -1,6 +1,6 @@
 {
   "name": "bad-takes-cutter",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Just in time bad clips cutter for Atem mini, Bitfocus Companion and Blackmagic Davinci Resolve. A modern web server to upload, process, and download the processed Davinci Resolve project file.",
   "main": "server.js",
   "scripts": {
